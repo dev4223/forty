@@ -46,9 +46,9 @@
                     </div>
                 </section>
                 <section>
+                    {{ range .Site.Params.Contact.address }}
                     <div class="contact-method">
                         <span class="icon alt fa-home"></span>
-                        {{ range .Site.Params.Contact.address }}
                         <h3>{{ .title }}</h3>
                         <span>{{ if .name }}{{ .name }}<br />{{end}}
                         {{ if .street }}{{ .street }}<br />{{end}}
@@ -59,8 +59,8 @@
                         {{ if .zip }}{{ .zip }}{{ end }}
                         {{ if .country }} <br /> {{ .country }} {{ end }}
                         </span>
-                        {{ end }}
                     </div>
+                    {{ end }}
                 </section>
             </section>
         </div>
