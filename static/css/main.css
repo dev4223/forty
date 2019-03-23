@@ -1140,6 +1140,7 @@
 
 			input[type="submit"].special:hover, input[type="submit"].special:active,
 			input[type="reset"].special:hover,
+			input[type="reset"]:hover,
 			input[type="reset"].special:active,
 			input[type="button"].special:hover,
 			input[type="button"].special:active,
