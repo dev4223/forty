@@ -25,6 +25,7 @@
                         <div class="content">
                             {{ .Content }}
                         </div>
+
                     </div>
                 </section>
 
@@ -41,7 +42,7 @@
                                 </header>
                                 <p>{{ .Description }}</p>
                                 <ul class="actions">
-                                    <li><a href="{{ .URL }}" class="button">Learn more</a></li>
+                                    <li><a href="{{ .URL }}" class="button grey">{{with .Params.buttonText}}{{ . }}{{ else }}{{"Lesen Sie mehr"}}{{end}}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,6 +50,11 @@
                     {{ end }}
                 </section>
             </div>
+
+        {{ "<!-- Contact -->" | safeHTML}}
+            {{ if .Site.Params.Contact.enable }}
+                {{ partial "contact.html" . }}
+            {{ end }}
             
         {{ "<!-- Footer -->" | safeHTML}}
 			{{ if .Site.Params.footer.enable }}
