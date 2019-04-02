@@ -5,8 +5,10 @@
                 <h2>{{ .Site.Params.Two.title}}</h2>
             </header>
             <p>{{ .Site.Params.Two.subtitle }}</p>
+            {{ if .Site.Params.Two.buttonText }}
             <ul class="actions">
                 <li><a href="{{ .Site.Params.Two.url | absURL}}" class="button grey next">{{ .Site.Params.Two.buttonText }}</a></li>
             </ul>
+            {{ end }}
         </div>
     </section>
