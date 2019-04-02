@@ -16,7 +16,11 @@
                     <section id="one">
                         <div class="inner single">
                             <header class="major">
-                                <h1>{{ .Title}}</h1>
+                                {{ if .Params.firstheader }}
+                                <h1>{{ .Params.firstheader }}</h1>
+                                {{ else }}
+                                <h1>fff{{ .Title }}</h1>
+                                {{ end }}
                             </header>
                             {{ if .Params.image }}
                                 <span class="image main"><img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" /></span>
