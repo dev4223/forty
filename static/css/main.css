@@ -1753,7 +1753,7 @@
 			}
 
 		body.is-loading #header.alt {
-			opacity: 0;
+			opacity: 1;
 		}
 
 		@media screen and (max-width: 1680px) {
@@ -1992,15 +1992,15 @@
 		}
 
 		body.is-loading #banner > .inner {
-			-moz-filter: blur(0.125em);
-			-webkit-filter: blur(0.125em);
-			-ms-filter: blur(0.125em);
-			filter: blur(0.125em);
+			-moz-filter: blur(0.025em);
+			-webkit-filter: blur(0.025em);
+			-ms-filter: blur(0.025em);
+			filter: blur(0.025em);
 			-moz-transform: translateX(-0.5em);
 			-webkit-transform: translateX(-0.5em);
 			-ms-transform: translateX(-0.5em);
 			transform: translateX(-0.5em);
-			opacity: 0;
+			opacity: 1;
 		}
 
 		@media screen and (max-width: 1280px) {
