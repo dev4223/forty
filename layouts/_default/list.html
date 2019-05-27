@@ -46,7 +46,7 @@
                                 <header class="major">
                                     <h3>{{ .Title }}</h3>
                                 </header>
-                                <p>{{ .Description }}</p>
+                                <p>{{ .Params.listdescription }}</p>
                                 <ul class="actions">
                                     <li><a href="{{ .URL }}" class="button grey">{{with .Params.buttonText}}{{ . }}{{ else }}{{"Lesen Sie mehr"}}{{end}}</a></li>
                                 </ul>
