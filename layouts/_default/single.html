@@ -26,6 +26,19 @@
                                 <span class="image main"><img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" /></span>
                             {{ end }}
                             {{ .Content }}
+                            {{ $taxo := "tags" }} <!-- Use the plural form here -->
+                            {{ with .Param $taxo }}
+                                {{ $taxnum := sub (len .)  1 }}
+                                <div class="meta">
+                                <a title="Schlüsselwörter Systemische Therapie" href="{{ $.Site.Params.baseURL }}/{{ $taxo }}">Schlüssel{{ if gt (len .) 1 }}wörter{{ else }}wort{{ end }}</a>:
+                                {{ range $index, $tagname := . }}
+                                    {{- if and (gt $index 0) (lt $index $taxnum) }}, {{ end -}}
+                                    {{ with $.Site.GetPage (printf "/%s/%s" $taxo $tagname) -}}
+                                        <a href="{{ .Permalink }}"><strong>{{ $tagname }}</strong></a>
+                                    {{- end -}}
+                                {{- end -}}
+                                </div>
+                            {{ end }}
                         </div>
                     </section>
             {{ "<!-- Disqus Inject -->" | safeHTML }}
