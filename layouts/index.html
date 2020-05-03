@@ -14,7 +14,11 @@
 		{{ "<!-- Main -->" | safeHTML }}
 			<div id="main">
 
-				{{ if .Site.Params.One.enable }}
+				{{ if .Site.Params.Announce.enable }}
+                    {{ partial "announce.html" . }}
+                {{ end }}
+
+                {{ if .Site.Params.One.enable }}
                     {{ partial "one.html" . }}
                 {{ end }}
 
