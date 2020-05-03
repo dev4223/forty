@@ -33,11 +33,11 @@
                     {{ range .Pages }}
                     <section>
                         {{ if .Params.imagelist }}
-                        <a href="{{ .URL }}" class="image">
-							<img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.imagelist }}" alt="" data-position="center center" />
+                        <a href="{{ .Permalink }}" class="image">
+							<img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
 						</a>
                         {{ else if .Params.image }}
-                        <a href="{{ .URL }}" class="image">
+                        <a href="{{ .Permalink }}" class="image">
                             <img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
                         </a>
                         {{ end }}
@@ -48,7 +48,7 @@
                                 </header>
                                 <p>{{ .Params.listdescription }}</p>
                                 <ul class="actions">
-                                    <li><a href="{{ .URL }}" class="button grey">{{with .Params.buttonText}}{{ . }}{{ else }}{{"Lesen Sie mehr"}}{{end}}</a></li>
+                                    <li><a href="{{ .Permalink }}" class="button grey">{{with .Params.buttonText}}{{ . }}{{ else }}{{"Lesen Sie mehr"}}{{end}}</a></li>
                                 </ul>
                             </div>
                         </div>
