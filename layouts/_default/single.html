@@ -23,7 +23,7 @@
                                 {{ end }}
                             </header>
                             {{ if .Params.image }}
-                                <span class="image main"><img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" /></span>
+                                <span class="image main"><img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="{{ .Title }}" /></span>
                             {{ end }}
                             {{ .Content }}
                         </div>

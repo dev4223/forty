@@ -16,7 +16,7 @@
                     <div class="inner">
 			{{ if .Params.image }}
                         <span class="image">
-                            <img src="{{ .Site.Params.baseURL }}/img/{{ .Params.image }}" alt="" />
+                            <img src="{{ .Site.Params.baseURL }}/img/{{ .Params.image }}" alt="{{ .Params.subtitle }}" />
                         </span>
 			{{ end }}
                         <header class="major">
@@ -34,11 +34,11 @@
                     <section>
                         {{ if .Params.imagelist }}
                         <a href="{{ .Permalink }}" class="image">
-							<img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.imagelist }}" alt="" data-position="center center" />
+							<img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.imagelist }}" alt="{{ .Title }}" data-position="center center" />
 						</a>
                         {{ else if .Params.image }}
                         <a href="{{ .Permalink }}" class="image">
-                            <img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
+                            <img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="{{ .Title }}" data-position="center center" />
                         </a>
                         {{ end }}
                         <div class="content">
