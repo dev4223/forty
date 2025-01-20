@@ -32,7 +32,7 @@
                                 <div class="meta">
                                 <a title="Schlüsselwörter Systemische Therapie" href="{{ $.Site.Params.baseURL }}/{{ $taxo }}">Schlüssel{{ if gt (len .) 1 }}wörter{{ else }}wort{{ end }}</a>:
                                 {{ range $index, $tagname := . }}
-                                    {{- if and (gt $index 0) (lt $index $taxnum) }}, {{ end -}}
+                                    {{- if and (gt $index 0) (le $index $taxnum) }}, {{ end -}}
                                     {{ with $.Site.GetPage (printf "/%s/%s" $taxo $tagname) -}}
                                         <a href="{{ .Permalink }}"><strong>{{ $tagname }}</strong></a>
                                     {{- end -}}
