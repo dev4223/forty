@@ -5,13 +5,13 @@
                 <h1>{{ .Site.Params.Banner.title }}</h1>
             </header>
             <div class="content">
-                <p>{{ .Site.Params.Banner.subtitle }}</p>
+                <p{{ if .Site.Params.Banner.subclass }} class="{{ .Site.Params.Banner.subclass }}"{{ end }}>{{ .Site.Params.Banner.subtitle }}</p>
                 <ul class="actions">
                     <li><a href="#one" class="button grey next scrolly">{{ .Site.Params.Banner.buttonText }}</a></li>
                 </ul>
             </div>
             <div class="content nobotmarg">
-                <div class="subtext nobotmarg">{{ .Site.Params.Banner.subtext | markdownify }}</div>
+                <div class="subtext nobotmarg">{{ .Site.Params.Banner.subtext | markdownify | safeHTML }}</div>
             </div>
         </div>
     </section>

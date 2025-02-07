@@ -4,11 +4,16 @@
             <header class="major">
                 <h2>{{ .Site.Params.One.title }}</h2>
             </header>
-            <p>{{ .Site.Params.One.subtitle }}</p>
-            {{ if .Site.Params.One.buttonText }}
-            <ul class="actions">
-                <li><a href="{{ .Site.Params.One.url | absURL}}" class="button grey next">{{ .Site.Params.One.buttonText }}</a></li>
-            </ul>
-            {{ end }}
+            <div class="content">
+                <p>{{ .Site.Params.One.subtitle }}</p>
+                {{ if .Site.Params.One.buttonText }}
+                <ul class="actions">
+                    <li><a href="{{ .Site.Params.One.url | absURL}}" class="button grey next">{{ .Site.Params.One.buttonText }}</a></li>
+                </ul>
+                {{ end }}
+            </div>
+            <div class="content nobotmarg">
+                <div class="subtext nobotmarg">{{ .Site.Params.One.subtext | markdownify | safeHTML }}</div>
+            </div>
         </div>
     </section>
