@@ -91,6 +91,7 @@
 			$wrapper = $('#wrapper'),
 			$header = $('#header'),
 			$banner = $('#banner');
+			$nav = $('nav');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -126,7 +127,7 @@
 		// Scrolly.
 			$('.scrolly').scrolly({
 				offset: function() {
-					return $header.height() - 2;
+					return $nav.height() - 2;
 				}
 			});
 

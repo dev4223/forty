@@ -30,9 +30,11 @@
                         <label class="error" for="message" id="message_error">Bitte eine Nachricht eingeben!</label>
                     </div>
                     <ul class="actions">
-                    	<li><label class="success" for="submit" id="message_success"></label></li>
                         <li><input type="submit" id="submit" name="submit" value="{{ .Site.Params.Contact.buttonSend }}" class="special subbutton" /></li>
                         <li><input type="reset" value="{{ .Site.Params.Contact.buttonClear }}" /></li>
+                    </ul>
+                    <ul class="actions">
+                        <li><label class="success" for="submit" id="message_success"></label></li>
                     </ul>
                 </form>
             </section>
