@@ -19,6 +19,11 @@
                             <img src="{{ .Site.Params.baseURL }}/img/{{ .Params.image }}" alt="{{ .Params.subtitle }}" />
                         </span>
 			{{ end }}
+                        <header class="kicker">
+                            {{ if .Params.subtitle }}
+                            <h5>{{ .Params.subtitle }}</h5>
+                            {{ end }}
+                        </header>
                         <header class="major">
                             <h1>{{ .Title }}</h1>
                         </header>

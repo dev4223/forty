@@ -15,6 +15,11 @@
                 <!-- One -->
                     <section id="one">
                         <div class="inner single">
+                            <header class="kicker">
+                                {{ if .Params.subtitle }}
+                                <h5>{{ .Params.subtitle }}</h5>
+                                {{ end }}
+                            </header>
                             <header class="major">
                                 {{ if .Params.firstheader }}
                                 <h1>{{ .Params.firstheader }}</h1>

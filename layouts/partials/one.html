@@ -1,6 +1,11 @@
 {{ "<!-- One -->" | safeHTML}}
     <section id="one">
         <div class="inner">
+            <header class="kicker">
+                {{ if .Site.Params.One.subtitle }}
+                <h5>{{ .Site.Params.One.subtitle }}</h5>
+                {{ end }}
+            </header>
             <header class="major">
                 <h2>{{ .Site.Params.One.title }}</h2>
             </header>
